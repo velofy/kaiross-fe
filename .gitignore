@@ -1,0 +1,342 @@
+# ===== Global / OS =====
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Icon?
+.Spotlight-V100/
+.Trashes
+.fseventsd
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.Trash-*/
+.nfs*
+.directory
+
+# ===== Git / VCS =====
+.git-credentials
+.gitconfig.local
+
+# ===== Secrets & Environment =====
+.env
+.env.*
+.envrc
+.secrets
+*.local
+*.secret
+*.pem
+*.key
+*.keystore
+*.p12
+*.pfx
+*.csr
+
+# ===== Logs & Diagnostics =====
+logs/
+*.log
+*.log.*
+*.pid
+*.seed
+*.pid.lock
+*.stackdump
+
+# ===== Common Caches & Temp =====
+.cache/
+.tmp/
+tmp/
+temp/
+~$*
+*~
+*.swp
+*.swo
+*.sw?
+*.orig
+*.rej
+*.bak
+*.backup
+
+# ===== Archives =====
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ===== Node / JavaScript / TypeScript =====
+node_modules/
+jspm_packages/
+bower_components/
+.npm/
+.pnpm-store/
+.pnpm-debug.log*
+.npmrc.local
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.yarnrc.yml.local
+
+dist/
+build/
+lib-cov
+coverage/
+.nyc_output
+coverage-final.json
+lcov.info
+
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.turbo/
+.vercel/
+.netlify/
+.firebase/
+.serverless/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+.vite/
+.vscode-test/
+.sass-cache/
+.webpack/
+.storybook-out/
+.out/
+.output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Framework outputs
+.next/
+.nuxt/
+.svelte-kit/
+.out/
+.output/
+out/
+public/build/
+
+# Gatsby / Hugo / Jekyll / MkDocs / Sphinx
+.cache/
+public/
+_site/
+site/
+docs/_build/
+
+# Deno
+.deno_dir/
+
+# Remix / Astro
+.remix/
+.astro/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Py envs
+.venv/
+venv/
+env/
+ENV/
+.env/
+
+# Py tooling caches
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+ruff_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Coverage / reports
+htmlcov/
+.coverage
+.coverage.*
+.tox/
+.nox/
+
+# PDM / Pipenv / Poetry (state files are typically committed; caches ignored)
+.pdm-build/
+
+# ===== Java / Kotlin / Android =====
+*.class
+*.war
+*.ear
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties.local
+
+# Android
+.local.properties
+.cxx/
+captures/
+*.iml
+
+# ===== iOS / Swift / Xcode =====
+DerivedData/
+build/
+*.xccheckout
+*.xcuserstate
+xcuserdata/
+*.moved-aside
+*.pbxuser
+*.mode1v3
+*.mode2v3
+.swiftpm/
+.build/
+
+# ===== Go =====
+bin/
+*.test
+coverage.out
+
+# ===== Rust =====
+target/
+**/*.rs.bk
+
+# ===== Ruby =====
+.bundle/
+vendor/bundle/
+log/
+tmp/
+coverage/
+.byebug_history
+*.gem
+
+# ===== PHP / Composer =====
+vendor/
+composer.lock.local
+
+# ===== .NET / C# / F# =====
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ===== C / C++ / CMake =====
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.dylib
+*.lib
+*.exp
+*.out
+*.exe
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+
+# ===== Databases & data files (local) =====
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.rdb
+*.h5
+
+# ===== Infrastructure =====
+# Docker
+.docker/
+.dockerignore.local
+
+# Terraform (keep lock file)
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Ansible
+*.retry
+
+# Helm
+charts/**/charts/
+charts/**/tmp/
+
+# ===== Monorepo / Tooling =====
+.turbo/
+.nx/cache/
+.changeset/cache/
+
+# ===== Editors / IDEs =====
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+*.iml
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+.vim/
+*.sw?
+
+# Others
+.history
+.ionide/
+
+# ===== Misc build outputs =====
+release/
+artifacts/
