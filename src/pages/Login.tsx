@@ -13,6 +13,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const { login } = useAuth();
   const navigate = useNavigate();
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,7 +31,19 @@ const Login = () => {
       <Helmet>
         <title>Login Kaiross</title>
         <meta name="description" content="Login to Kaiross with mock credentials to explore the prototype." />
-        <link rel="canonical" href={window.location.origin + "/login"} />
+        <link rel="canonical" href={origin + "/login"} />
+        <meta property="og:title" content="Login Kaiross" />
+        <meta property="og:description" content="Login to Kaiross with mock credentials to explore the prototype." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={origin + "/login"} />
+        <meta property="og:site_name" content="Kaiross" />
+        <meta property="og:image" content={origin + "/favicon.png"} />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Login Kaiross" />
+        <meta name="twitter:description" content="Login to Kaiross with mock credentials to explore the prototype." />
+        <meta name="twitter:image" content={origin + "/favicon.png"} />
       </Helmet>
 
       <main className="container mx-auto grid min-h-[calc(100svh-56px)] md:min-h-[calc(100dvh-56px)] place-items-center px-4">

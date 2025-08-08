@@ -16,13 +16,26 @@ const DM = () => {
   const thread = messages.filter(
     (m) => (m.sender === me.id && m.receiver === selected) || (m.sender === selected && m.receiver === me.id)
   );
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
 
   return (
     <>
       <Helmet>
         <title>Direct Messages Kaiross</title>
         <meta name="description" content="Chat with your connections in a clean, responsive layout." />
-        <link rel="canonical" href={window.location.origin + "/dm"} />
+        <link rel="canonical" href={origin + "/dm"} />
+        <meta property="og:title" content="Direct Messages Kaiross" />
+        <meta property="og:description" content="Chat with your connections in a clean, responsive layout." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={origin + "/dm"} />
+        <meta property="og:site_name" content="Kaiross" />
+        <meta property="og:image" content={origin + "/favicon.png"} />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Direct Messages Kaiross" />
+        <meta name="twitter:description" content="Chat with your connections in a clean, responsive layout." />
+        <meta name="twitter:image" content={origin + "/favicon.png"} />
       </Helmet>
       <main className="container mx-auto grid min-h-[calc(100vh-120px)] grid-cols-1 gap-4 py-6 md:grid-cols-3">
         <header className="md:col-span-3">

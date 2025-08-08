@@ -3,12 +3,25 @@ import PostCard from "@/components/PostCard";
 import { posts } from "@/data/mockData";
 
 const Feed = () => {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
   return (
     <>
       <Helmet>
         <title>Feed Kaiross</title>
         <meta name="description" content="See posts from connected users in a warm, playful feed." />
-        <link rel="canonical" href={window.location.origin + "/feed"} />
+        <link rel="canonical" href={origin + "/feed"} />
+        <meta property="og:title" content="Feed Kaiross" />
+        <meta property="og:description" content="See posts from connected users in a warm, playful feed." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={origin + "/feed"} />
+        <meta property="og:site_name" content="Kaiross" />
+        <meta property="og:image" content={origin + "/favicon.png"} />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Feed Kaiross" />
+        <meta name="twitter:description" content="See posts from connected users in a warm, playful feed." />
+        <meta name="twitter:image" content={origin + "/favicon.png"} />
       </Helmet>
       <main className="container mx-auto py-6 md:max-w-2xl">
         <header className="mb-4">

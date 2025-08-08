@@ -30,6 +30,24 @@ const Index = () => {
           content="Kaiross: The trusted social platform for education communities. Connect with verified peers, mentors, and friends effortlessly."
         />
         <link rel="canonical" href={origin + "/"} />
+        <meta property="og:title" content="Kaiross — Connect, Collaborate, Thrive" />
+        <meta
+          property="og:description"
+          content="Kaiross: The trusted social platform for education communities. Connect with verified peers, mentors, and friends effortlessly."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={origin + "/"} />
+        <meta property="og:site_name" content="Kaiross" />
+        <meta property="og:image" content={origin + "/favicon.png"} />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Kaiross — Connect, Collaborate, Thrive" />
+        <meta
+          name="twitter:description"
+          content="Kaiross: The trusted social platform for education communities. Connect with verified peers, mentors, and friends effortlessly."
+        />
+        <meta name="twitter:image" content={origin + "/favicon.png"} />
       </Helmet>
 
       <main className="relative min-h-[calc(100svh-56px)] md:min-h-[calc(100dvh-56px)] flex items-center justify-center pb-[env(safe-area-inset-bottom)]">
