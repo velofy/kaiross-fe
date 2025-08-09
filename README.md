@@ -1,2 +1,2 @@
 # Kaiross
-## Finding like minded people have never became easier
+Finding like minded people have never became easier

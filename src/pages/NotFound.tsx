@@ -16,10 +16,10 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <title>404 Not Found — Kaiross</title>
+        <title>404 Not Found - Kaiross</title>
         <meta name="description" content="The page you are looking for does not exist." />
         <link rel="canonical" href={origin + location.pathname} />
-        <meta property="og:title" content="404 Not Found — Kaiross" />
+        <meta property="og:title" content="404 Not Found - Kaiross" />
         <meta property="og:description" content="The page you are looking for does not exist." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={origin + location.pathname} />
@@ -28,7 +28,7 @@ const NotFound = () => {
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="404 Not Found — Kaiross" />
+        <meta name="twitter:title" content="404 Not Found - Kaiross" />
         <meta name="twitter:description" content="The page you are looking for does not exist." />
         <meta name="twitter:image" content={origin + "/favicon.png"} />
       </Helmet>

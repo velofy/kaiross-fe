@@ -8,6 +8,7 @@ import { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { AuthProvider } from "./context/AuthContext";
+import FullScreenLoader from "./components/FullScreenLoader";
 import RequireAuth from "./components/RequireAuth";
 
 // Route-based code splitting
@@ -30,7 +31,7 @@ const App = () => (
         <AuthProvider>
           <BrowserRouter>
             <Navbar />
-            <Suspense fallback={<div className="container mx-auto p-6">Loading…</div>}>
+            <Suspense fallback={<FullScreenLoader />}>
               <ErrorBoundary>
                 <Routes>
                 <Route path="/" element={<Index />} />

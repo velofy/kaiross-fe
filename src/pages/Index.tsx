@@ -24,13 +24,13 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Kaiross — Connect, Collaborate, Thrive</title>
+        <title>Kaiross - Connect, Collaborate, Thrive</title>
         <meta
           name="description"
           content="Kaiross: The trusted social platform for education communities. Connect with verified peers, mentors, and friends effortlessly."
         />
         <link rel="canonical" href={origin + "/"} />
-        <meta property="og:title" content="Kaiross — Connect, Collaborate, Thrive" />
+        <meta property="og:title" content="Kaiross  Connect, Collaborate, Thrive" />
         <meta
           property="og:description"
           content="Kaiross: The trusted social platform for education communities. Connect with verified peers, mentors, and friends effortlessly."
@@ -42,7 +42,7 @@ const Index = () => {
         <meta property="og:image:width" content="512" />
         <meta property="og:image:height" content="512" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Kaiross — Connect, Collaborate, Thrive" />
+        <meta name="twitter:title" content="Kaiross - Connect, Collaborate, Thrive" />
         <meta
           name="twitter:description"
           content="Kaiross: The trusted social platform for education communities. Connect with verified peers, mentors, and friends effortlessly."
