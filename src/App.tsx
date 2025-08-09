@@ -4,16 +4,20 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Login from "./pages/Login";
-import Feed from "./pages/Feed";
-import Discovery from "./pages/Discovery";
-import Profile from "./pages/Profile";
-import DM from "./pages/DM";
+import { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { AuthProvider } from "./context/AuthContext";
 import RequireAuth from "./components/RequireAuth";
+
+// Route-based code splitting
+const Index = lazy(() => import("./pages/Index"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Login = lazy(() => import("./pages/Login"));
+const Feed = lazy(() => import("./pages/Feed"));
+const Discovery = lazy(() => import("./pages/Discovery"));
+const Profile = lazy(() => import("./pages/Profile"));
+const DM = lazy(() => import("./pages/DM"));
 
 const queryClient = new QueryClient();
 
@@ -26,44 +30,48 @@ const App = () => (
         <AuthProvider>
           <BrowserRouter>
             <Navbar />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/login" element={<Login />} />
-              <Route
-                path="/feed"
-                element={
-                  <RequireAuth>
-                    <Feed />
-                  </RequireAuth>
-                }
-              />
-              <Route
-                path="/discovery"
-                element={
-                  <RequireAuth>
-                    <Discovery />
-                  </RequireAuth>
-                }
-              />
-              <Route
-                path="/profile"
-                element={
-                  <RequireAuth>
-                    <Profile />
-                  </RequireAuth>
-                }
-              />
-              <Route
-                path="/dm"
-                element={
-                  <RequireAuth>
-                    <DM />
-                  </RequireAuth>
-                }
-              />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={<div className="container mx-auto p-6">Loading…</div>}>
+              <ErrorBoundary>
+                <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/login" element={<Login />} />
+                <Route
+                  path="/feed"
+                  element={
+                    <RequireAuth>
+                      <Feed />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/discovery"
+                  element={
+                    <RequireAuth>
+                      <Discovery />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/profile"
+                  element={
+                    <RequireAuth>
+                      <Profile />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="/dm"
+                  element={
+                    <RequireAuth>
+                      <DM />
+                    </RequireAuth>
+                  }
+                />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+                </Routes>
+              </ErrorBoundary>
+            </Suspense>
           </BrowserRouter>
         </AuthProvider>
       </TooltipProvider>

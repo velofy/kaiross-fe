@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -9,7 +10,7 @@ const UserCard = ({ user }: { user: User }) => {
     <Card className="shadow-elevated border-border/70">
       <CardContent className="flex items-center gap-3 p-4">
         <Avatar>
-          <AvatarImage src={user.avatar} alt={`${user.name} avatar`} />
+          <AvatarImage src={user.avatar} alt={`${user.name} avatar`} width={40} height={40} />
           <AvatarFallback>{user.name[0]}</AvatarFallback>
         </Avatar>
         <div className="flex-1">
@@ -24,4 +25,4 @@ const UserCard = ({ user }: { user: User }) => {
   );
 };
 
-export default UserCard;
+export default memo(UserCard);

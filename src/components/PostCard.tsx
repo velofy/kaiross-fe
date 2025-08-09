@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Post } from "@/data/mockData";
@@ -15,7 +16,7 @@ const PostCard = ({ post }: { post: Post }) => {
       <CardContent className="p-4">
         <div className="mb-3 flex items-center gap-3">
           <Avatar>
-            <AvatarImage src={post.avatar} alt={`${post.author} avatar`} />
+            <AvatarImage src={post.avatar} alt={`${post.author} avatar`} width={40} height={40} />
             <AvatarFallback>{post.author[0]}</AvatarFallback>
           </Avatar>
           <div className="leading-tight">
@@ -31,6 +32,7 @@ const PostCard = ({ post }: { post: Post }) => {
             alt={`Post by ${post.author}`}
             className="aspect-[11/8] w-full rounded-md object-cover"
             loading="lazy"
+            decoding="async"
           />
         )}
       </CardContent>
@@ -38,4 +40,4 @@ const PostCard = ({ post }: { post: Post }) => {
   );
 };
 
-export default PostCard;
+export default memo(PostCard);

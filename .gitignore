@@ -75,3 +75,6 @@ storybook-static
 .idea
 .fleet
 *.code-workspace
+
+documentation/
+*.md

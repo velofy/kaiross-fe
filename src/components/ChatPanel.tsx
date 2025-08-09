@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { memo, useMemo, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -58,4 +58,4 @@ const ChatPanel = ({
   );
 };
 
-export default ChatPanel;
+export default memo(ChatPanel);
